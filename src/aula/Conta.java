@@ -12,12 +12,24 @@ class Conta {
 	}
 
 	public boolean saca(double valor) {
-		if (saldo >= valor) {
+		if (this.saldo >= valor) {
 			this.saldo -= valor;
 			return true;
 		} else {
 			return false;
 		}
+	}
+
+	public boolean transfere(double valor, Conta destino) {
+
+		if (this.saldo >= valor) {
+			this.saca(valor);
+			destino.deposita(valor);
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 }
