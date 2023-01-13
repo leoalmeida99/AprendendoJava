@@ -7,14 +7,15 @@ public class TestaMetodo {
 		Conta contaExemplo = new Conta();
 		contaExemplo.saldo = 100;
 		System.out.println(contaExemplo.saldo);
-
 		contaExemplo.deposita(200);
-
+		System.out.println(contaExemplo.saldo);
+		contaExemplo.deposita(200);
 		System.out.println(contaExemplo.saldo);
 		
-		contaExemplo.deposita(200);
-
+		contaExemplo.saca(400);
 		System.out.println(contaExemplo.saldo);
+		
+		
 	}
 
 }

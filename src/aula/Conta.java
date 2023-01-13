@@ -8,11 +8,16 @@ class Conta {
 	String titular;
 
 	public void deposita(double valor) {
-		
-		this.saldo = this.saldo + valor;
-		
-		//saldo += valor;
-		//opca
+		this.saldo += valor;
+	}
+
+	public boolean saca(double valor) {
+		if (saldo >= valor) {
+			this.saldo -= valor;
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
